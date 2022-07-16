@@ -2,220 +2,139 @@
     padding: 0;
     margin: 0;
 }
-.cotenair{
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    background-color: #ccc;
+/*debut des proprietees*/
+body, html {
+    overflow-x: hidden;
 }
-.gauche{
-    height: 100%;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-button{
-    height: 40px;
-    transform: translate(-330px, 480px);
-    padding: 5px;
-    
 
-}
-.initial{
-    height: 100px;
-    width: 220px;
-    border: 2px solid black;
-    top: -295px;
-    left: 290px;
-    border-radius: 20px;
-    position: relative;
+.center{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #73C2FB;
-    border: 5px solid #458E9D;
-    -moz-box-shadow:1px 3px 15px #555;
-    -webkit-box-shadow:1px 3px 15px #555;
-    box-shadow:1px 3px 15px #555;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.white-p {
+    font-size: 1.2vw;
+    color: white;
 }
 
-a{
-    text-decoration: none;
-    color: #458E9D;
-    text-transform:uppercase;
-    font-style:normal;
-    font-weight:bold;
+/*fin des proprietees*/
+
+
+/*debut des composants*/
+.bouton1 {
+    background-color: transparent;
+    padding: 0.5vw 2vw;
+    border-radius: 5px;
+    position: relative;
+    left: -7vw;
+    border: 0.2vw solid white;
 }
 
-a:hover{
-    background-color: #fff;
-    -moz-box-shadow:1px 3px 15px #555;
-    -webkit-box-shadow:1px 3px 15px #555;
-    box-shadow:1px 3px 15px #555;
+.li-head > a::after {
+    display: block;
+    content:"";
+    height: 0.3vw;
+    width: 0px;
+    margin-top: -2vw;
+    background-color: #E29000;
+    transition:width 1s;
+}
+.li-head > a::before {
+    display: block;
+    content:"";
+    height: 0.3vw;
+    width: 0px;
+    background-color: #E29000;
+    transition:width 1s;
+    transform: translateY(2vw);
 }
 
-h1{
-    text-transform:uppercase;
-    font-style:normal;
-    font-weight:bold;
-    letter-spacing:1px;
-    font-size:45px;
-    color:#444;
-    text-align:left;
-    margin: 0px 0px 15px 20px;
-    text-shadow: -1px -1px 1px #ccc;
+.li-head > a:hover {
+    letter-spacing: 0.5vw;
+    font-size: 1.3vw;
+    color: #E29000;
+    transition: 0.5s;
 }
-.titre{
-    font-size: 20px;
-    transform: translate(120px, -30px);
+
+.li-head:hover  > a::after {
+    width: 100%;
 }
-.image{
-    height: 40%;
-    width: 45%;
-    border: 5px solid #fff;
-    border-radius: 100%;
-    background-image: url("images/gaspar1-removebg-preview\ \(1\).png");
-    background-size: cover;
-    background-repeat: no-repeat;
+.li-head:hover  > a::before {
+    width: 100%;
+}
+
+.navigation:hover{
+    border-bottom: 0.5vw solid white;
+    transition: 1s;
+    transition-delay: 1s;
+}
+/*fin des composants*/
+
+
+
+/*debut du header*/
+header{
+    height: 100vw;
+    width: 100vw;
+    background-color: #FFF48D;
+}
+.navigation {
+    height: 5vw;
+    width: 100vw;
+    justify-content: space-between;
+    background-color: #E0CDA9;
+    position: fixed;
     z-index: 1;
     cursor: pointer;
 }
-   
-ul.accordion{
-    list-style:none;
-    right:80px;
-    top:0px;
-    position: absolute;
-    font-family: Cambria, serif;
-    font-size: 16px;
-    font-style: italic;
-    line-height: 1.5em;
+.liste {
+    height: 5vw;
+    width: 78vw;
+    list-style-type: none;
 }
-
-ul.accordion li{
-    float:left;
-    width:115px;
-    height:480px;
-    display:block;
-    border-right:20px solid #fff;
-    border-bottom:20px solid #fff;
-    background-color:#fff;
-    background-repeat:no-repeat;
-    background-position:center center;
-    position:relative;
-    overflow:hidden;
-    cursor:pointer;
-    -moz-box-shadow:1px 3px 15px #555;
-    -webkit-box-shadow:1px 3px 15px #555;
-    box-shadow:1px 3px 15px #555;
+.li-head, a {
+    text-decoration: none;
+    color: white;
+    transform: translateY(-1vw);
 }
-ul.accordion li.bg1{
-    background-color: #CB8E00;
-    background-image: url("images/mon\ ange.jpg");
-}
-ul.accordion li.bg2{
-    background-image: url("images/tunnel.JPG");
-}
-ul.accordion li.bg3{
-    background-image: url("images/la\ joie\ du\ coeur.jfif");
-}
-ul.accordion li.bg4{
-    background-image: url("images/gaspard2-removebg-preview.png");
-}
-
-ul.accordion li.bleft{
-    border-left: 2px solid #fff;
-}
-ul.accordion li .heading{
-    background-color: #fff;
-    padding: 10px;
-    margin-top: 60px;
-    opacity: 0.9;
-    text-transform:uppercase;
-    font-style:normal;
-    font-weight: bold;
-    letter-spacing:1px;
-    font-size: 14px;
-    color: #444;
-    text-align: center;
-    text-shadow: -1px -1px 1px #ccc;
-}
-/* style de Le div qui contient la description aura le style suivant :Le div qui contient la description aura le style suivant :Le div qui contient la description aura le style suivant : */
-ul.accordion li .description{
-    position: absolute;
-    width: 480px;
-    height: 175px;
-    bottom: 0px;
-    left: 0px;
-    display: none;
-}
-
-/* Nous l'avons initialement défini sur display:none, car nous voulons qu'il n'apparaisse qu'au survol. Et voici comment nous stylisons les éléments internes : */
-ul.accordion li .description h2{
+.h1-head{
     text-transform:uppercase;
     font-style:normal;
     font-weight:bold;
     letter-spacing:1px;
-    font-size:45px;
+    font-size:3vw;
     color:#444;
     text-align:left;
     margin: 0px 0px 15px 20px;
     text-shadow: -1px -1px 1px #ccc;
+    position: relative;
+    top: 5vw;
 }
-ul.accordion li .description p{
-    line-height: 14px;
-    margin: 10px 22px;
-    font-family: "Trebuchet MS", sans-serif;
-    font-size: 12px;
-    font-style: italic;
-    font-weight: normal;
-    text-transform: none;
-    letter-spacing: normal;
-    line-height: 1.6em;
-}
-ul.accordion li .description a{
-    position: absolute;
-    bottom: 5px;
-    left: 20px;
-    text-transform: uppercase;
-    font-style: normal;
-    font-size: 11px;
-    text-decoration: none;
-    color: #888;
-}
-ul.accordion li .description a:hover{
-    color: #333;
-    text-decoration: underline;
-}
-/* Le seul style manquant est celui de l'élément dégradé : */
-
-ul.accordion li .bgDescription{
-    background: transparent url(images/bgDescription.png) repeat-x top left;
-    height: 340px;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    display: none;
-}
-/* L'image que nous répétons est un dégradé qui va du blanc au transparent. Cela donnera un bel effet lorsque nous ferons glisser cette div par le bas. */
+/*fin du header*/
 
 
 
-.essai{
-    height: 500vh;
-    width: 100vw;
-    background-color: aquamarine;
 
-}
-.stiky{
-    height: 10vh;
-    width: 100vw;
-    background-color: blue;
-    position: sticky;
-    top: 0px;
-}
+
+
+
+
+
+
+
+
 
 
 

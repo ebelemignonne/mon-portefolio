@@ -76,13 +76,17 @@ body, html {
     transition: 1s;
     cursor: pointer;
 }
+.img-head:hover {
+    height: 32vw;
+}
 .bas-tete2:hover{
-    border-color: #DFFF00;
+    border-color: #F6DC12;
     -moz-box-shadow:1px 3px 15px #555;
     -webkit-box-shadow:1px 3px 15px #555;
     box-shadow:1px 3px 15px #555;
-    height: 14vw;
-    width: 42vw;
+    height: 33vw;
+    width: 23vw;
+    transition-duration: 0.5s;
 
 }
 .li-head:hover  > a::after {
@@ -177,7 +181,10 @@ header {
     width: 40vw;
     color: #CB8E00;
     position: relative;
-    background-color: rgb(36, 21, 21);
+    -moz-box-shadow:1px 3px 15px #555;
+    -webkit-box-shadow:1px 3px 15px #555;
+    box-shadow:1px 3px 15px #555;
+    background-color:  #555;
     left: 1.5vw;
     top: -3vw;
     cursor: pointer;

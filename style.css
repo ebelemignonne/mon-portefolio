@@ -6,7 +6,6 @@
 body, html {
     overflow-x: hidden;
 }
-
 .center{
     display: flex;
     justify-content: center;
@@ -41,7 +40,6 @@ body, html {
     left: -7vw;
     border: 0.2vw solid white;
 }
-
 .li-head > a::after {
     display: block;
     content:"";
@@ -60,33 +58,59 @@ body, html {
     transition:width 1s;
     transform: translateY(2vw);
 }
-
 .li-head > a:hover {
     letter-spacing: 0.5vw;
     font-size: 1.3vw;
     color: #E29000;
     transition: 0.5s;
+    background-color: #fff;
+    -moz-box-shadow:1px 3px 15px #555;
+    -webkit-box-shadow:1px 3px 15px #555;
+    box-shadow:1px 3px 15px #555;
 }
+.style:hover {
+    background-color: #fff;
+    -moz-box-shadow:1px 3px 15px #555;
+    -webkit-box-shadow:1px 3px 15px #555;
+    box-shadow:1px 3px 15px #555;
+    transition: 1s;
+    cursor: pointer;
+}
+.bas-tete2:hover{
+    border-color: #DFFF00;
+    -moz-box-shadow:1px 3px 15px #555;
+    -webkit-box-shadow:1px 3px 15px #555;
+    box-shadow:1px 3px 15px #555;
+    height: 14vw;
+    width: 42vw;
 
+}
 .li-head:hover  > a::after {
     width: 100%;
 }
 .li-head:hover  > a::before {
     width: 100%;
 }
-
 .navigation:hover{
     border-bottom: 0.5vw solid white;
     transition: 1s;
     transition-delay: 1s;
 }
+.blok1{
+    height: 40vw;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 /*fin des composants*/
 
 
 
 /*debut du header*/
-header{
-    height: 100vw;
+header {
+    height: 60vw;
     width: 100vw;
     background-color: #FFF48D;
 }
@@ -101,7 +125,7 @@ header{
 }
 .liste {
     height: 5vw;
-    width: 78vw;
+    width: 100vw;
     list-style-type: none;
 }
 .li-head, a {
@@ -120,7 +144,44 @@ header{
     margin: 0px 0px 15px 20px;
     text-shadow: -1px -1px 1px #ccc;
     position: relative;
-    top: 5vw;
+    top: 0vw;
+}
+.img-head{
+    position:relative;
+    height: 30vw;
+}
+.bas-tete1{
+    position: relative;
+    bottom: -10vw;
+   align-items: flex-start;
+    
+}
+.bas-tete2{
+    height: 31vw;
+    width: 21vw;
+    border: 1vw solid white;
+    position: relative;
+    bottom: -10vw;
+}
+.bouton-header{
+    margin-left: 10vw;
+    color: #E0CDA9;
+    border: 0.3vw solid #E0CDA9;
+}
+/*fin du header*/
+
+
+/*star du header*/
+.bas-tete1a{
+    height: 12vw;
+    width: 40vw;
+    color: #CB8E00;
+    position: relative;
+    background-color: rgb(36, 21, 21);
+    left: 1.5vw;
+    top: -3vw;
+    cursor: pointer;
+    border-radius: 5px;
 }
 /*fin du header*/
 
